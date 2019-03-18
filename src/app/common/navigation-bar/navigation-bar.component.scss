@@ -1,0 +1,7 @@
+@import "../variables.scss";
+
+.navbar{
+    height: $navbar-height;
+    background-color: $navbar-background-color;
+    color: $navbar-text-color;
+}

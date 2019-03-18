@@ -1,0 +1,24 @@
+@import "../variables.scss";
+
+.left-panel{
+    position: fixed;
+    z-index: 1000; 
+    width: $menu-width;
+    border-right:  1px solid rgba(0,0,0,.0625);
+    top:0;
+    bottom: 0;
+}
+
+.navbar{
+    height: $navbar-height;
+    background-color: $navbar-background-color;
+    color: $navbar-text-color;
+}
+
+.navbar-brand{
+    color:$navbar-text-color;
+}
+
+.right-panel{
+    padding-left: $menu-width 
+}

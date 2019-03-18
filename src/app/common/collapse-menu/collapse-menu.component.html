@@ -1,0 +1,12 @@
+<div class="menu">
+  <div *ngFor="let mItem of menuShowItems">
+      <div (click)="toogle(mItem)"  class="menu-item">
+          <i [ngClass]="['fa',mItem.item.icon]"></i><span class="item-text"> {{mItem.item.label}}</span>
+      </div>
+      <div class="sub-menu" [@changeState]="mItem.show ? 'state1':'state2'">
+          <div style="margin:0;" *ngFor="let subitem of mItem.item.submenu">
+              <a href="#" class="sub-menu-item"><i [ngClass]="['fa',subitem.icon]"></i> {{subitem.label}}</a>
+          </div>
+      </div>
+  </div>
+</div>

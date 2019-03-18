@@ -1,0 +1,36 @@
+@import "../variables.scss";
+
+.menu-item{
+    border: 1px solid #c8c8c8;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    color: #333333;
+    padding: 0.714em 0.857em;
+    font-weight: 700;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    background-color: #dbdbdb;;
+}
+
+.sub-menu{
+    background-color: #ffffff;
+    border: 1px solid #c8c8c8;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.sub-menu-item{
+    display: block;
+    height: '1px';
+    visibility: 'hidden';
+    padding: 0.714em 0.857em;
+    color: #333333;
+    text-decoration: none;
+}
+
+.sub-menu-item:hover{
+    background-color: #eaeaea;
+}

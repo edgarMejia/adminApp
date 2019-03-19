@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';;
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
+//Services
+import { TemplateService } from './services/template.service';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -16,7 +19,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     CommonAppModule
   ],
-  providers: [],
+  providers: [TemplateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,8 @@
 @import "../variables.scss";
 
 .menu-item{
-    border: 1px solid #c8c8c8;
+    //border: 1px solid #c8c8c8;
+    border: none;
     background-color: #f4f4f4;
     overflow: hidden;
     color: #333333;
@@ -11,13 +12,18 @@
     cursor: pointer;
 }
 
+.active-menu { // For ative menu
+    border-left: $accent-color solid 5px;
+}
+
 .menu-item:hover{
     background-color: #dbdbdb;;
 }
 
 .sub-menu{
     background-color: #ffffff;
-    border: 1px solid #c8c8c8;
+    //border: 1px solid #c8c8c8;
+    border: none;
     position: relative;
     overflow-y: hidden;
 }

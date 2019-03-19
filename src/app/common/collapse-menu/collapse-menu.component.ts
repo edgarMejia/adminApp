@@ -2,6 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
+// Services
+import { TemplateService } from '../../services/template.service';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-collapse-menu',
   templateUrl: './collapse-menu.component.html',
@@ -24,24 +28,23 @@ export class CollapseMenuComponent implements OnInit {
 
   @Input()
   private menuItems: MenuItem[];
-
   menuShowItems: MenuShowItem[];
-
   private lastSelected = -1;
+  private menuStatus:any
 
-  constructor() {
-
-  }
+  constructor(private templateService: TemplateService) {}
 
   ngOnInit() {
     console.log(this.menuItems);
+    this.menuStatus = this.templateService.menuIsOpen();
+    console.log(this.menuStatus);
     this.menuShowItems = [];
     this.menuItems.forEach((val, index, array) => {
         this.menuShowItems.push({item: val, show: false});
     });
   }
 
-  toogle(selected: MenuShowItem) {
+  toggle(selected: MenuShowItem) {
     const index  = this.menuShowItems.indexOf(selected);
     if (this.lastSelected === index) {
       this.menuShowItems[index].show = false;
